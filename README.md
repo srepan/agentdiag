@@ -386,12 +386,29 @@ AZURE_OPENAI_DEPLOYMENT=YOUR_DEPLOYMENT_NAME
 
 Do not commit credentials, tokens, or environment-specific secrets.
 
-For the current reference implementation, authenticate locally with a Microsoft Entra ID identity that has access to the configured model endpoint before running the benchmark.
+### Authentication
+
+Before running the benchmark, authenticate with an Azure identity that has access to the configured model endpoint:
+
+```powershell
+az login
+```
+
+If the model resource belongs to a specific Microsoft Entra tenant, authenticate explicitly against that tenant:
+
+```powershell
+az login --tenant YOUR_TENANT_ID
+```
+
+Then run the benchmark:
+
+```powershell
+python -m agentdiag.runner
+```
 
 > Authentication and endpoint configuration can vary by deployment. AgentDiag does not require scenario files to contain authentication secrets.
 
 ---
-
 ## Run the benchmark
 
 From the repository root:
