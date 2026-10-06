@@ -1,0 +1,29 @@
+{
+  "id": "identity-001",
+  "category": "authorization",
+  "description": "An AI agent fails while attempting to access a document service.",
+  "observations": [
+    "The agent successfully obtained an access token.",
+    "The access token is valid and has not expired.",
+    "The document service returned HTTP 403 Forbidden.",
+    "The requested resource requires the documents.read permission.",
+    "The agent identity does not have the documents.read permission."
+  ],
+  "ground_truth": {
+    "category": "authorization",
+    "root_cause": "missing_permission",
+    "accepted_aliases": [
+        "missing_documents_read_permission",
+        "insufficient_permission",
+        "permission_missing",
+        "rbac_failure",
+        "access_denied"
+    ],
+    "expected_evidence": [
+        "Access token is valid",
+        "documents.read permission is missing",
+        "HTTP 403 Forbidden"
+    ],
+    "expected_remediation": "Grant the required documents.read permission to the agent identity."
+    }
+}

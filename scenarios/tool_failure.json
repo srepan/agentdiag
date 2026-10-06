@@ -1,0 +1,27 @@
+{
+  "id": "tool-001",
+  "category": "tool_failure",
+  "description": "An AI agent fails while calling a weather tool.",
+  "observations": [
+    "The user's request was successfully received.",
+    "The language model successfully selected the weather tool.",
+    "The tool expected a parameter named location.",
+    "The agent sent a parameter named city.",
+    "The tool returned: Missing required parameter: location"
+  ],
+  "ground_truth": {
+    "category": "tool",
+    "root_cause": "tool_schema_mismatch",
+    "accepted_aliases": [
+      "tool_parameter_name_mismatch",
+      "parameter_name_mismatch",
+      "tool_parameter_mismatch",
+      "parameter_schema_mismatch"
+    ],
+    "expected_evidence": [
+      "Tool expected location",
+      "Agent provided city"
+    ],
+    "expected_remediation": "Use the location parameter required by the tool schema."
+  }
+}
