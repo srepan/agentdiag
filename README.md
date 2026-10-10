@@ -352,7 +352,7 @@ The current development implementation uses an Azure-hosted model with Microsoft
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/srepan/agentdiag.git
 cd agentdiag
 ```
 
