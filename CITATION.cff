@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use AgentDiag in your research or work, please cite it using the metadata below."
+
+title: "AgentDiag: A Benchmark for Evidence-Grounded Root-Cause Diagnosis in AI Systems"
+
+type: software
+
+authors:
+  - family-names: "Panthangi"
+    given-names: "Sreekanth"
+
+version: "0.1.0"
+
+date-released: "2026-10-08"
+
+license: "MIT"
+
+repository-code: "https://github.com/srepan/agentdiag"
+
+keywords:
+  - "AI evaluation"
+  - "root-cause diagnosis"
+  - "evidence grounding"
+  - "AI agents"
+  - "benchmark"
